@@ -1,0 +1,20 @@
+p {
+  font-size: 1em;
+}
+
+h1{
+  font-size: 5em;
+}
+
+h2{
+  font-size: 1.8em;
+}
+
+body{
+  background-color: rgb(177, 207, 172);
+}
+
+button{
+  size: 3em;
+  border-radius: 5em;
+}
