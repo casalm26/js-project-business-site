@@ -41,6 +41,50 @@ h3{
  text-transform: uppercase;
 }
 
+.quotes{
+  text-align: center;
+  padding: 20px;
+  background-color: #34495e;
+  color: white;
+}
+
+.quote{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.quote p{
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.testimonials{
+  text-align: center;
+  padding: 20px;
+  background-color: #34495e;
+  color: white;
+}
+
+.testimonial{
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.testimonial p{
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+.testimonial:nth-child(2){
+  margin-top: 20px;
+}
+
+.testimonial:nth-child(3){
+  margin-top: 20px;
+}
+
+
+
 .hamburger-menu {
   cursor: pointer;
   z-index: 100;
