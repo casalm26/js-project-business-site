@@ -123,6 +123,7 @@ nav {
   padding: 1rem;
   padding-top: 3rem;
   padding-bottom: 0;
+  box-shadow: 9px 10px 33px -7px rgba(0,0,0,0.5);
 }
 
 .service-card:hover {
@@ -317,6 +318,168 @@ footer {
   
   .nav-links {
     display: flex !important;
+  }
+}
+
+/* Content Section Styles */
+.content-section {
+  padding: 4rem 2rem;
+  background-color: var(--background-color);
+}
+
+.content-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.content-container h2 {
+  color: var(--text-color);
+  font-weight: normal;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  margin-bottom: 2rem;
+}
+
+.content-container p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 4rem;
+}
+
+.benefits-list li {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.benefits-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+.session-info {
+  background-color: var(--light-color);
+  padding: 3rem;
+  margin: 3rem 0;
+}
+
+.session-info h3 {
+  color: var(--text-color);
+  font-weight: normal;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.session-info p {
+  margin-bottom: 2rem;
+}
+
+.session-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.session-info ul li {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.session-info ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+/* Responsive adjustments for content sections */
+@media (max-width: 768px) {
+  .content-container {
+    padding: 0 1rem;
+  }
+
+  .session-info {
+    padding: 2rem;
+  }
+
+  .content-container h2 {
+    font-size: 1.8rem;
+  }
+
+  .content-container p,
+  .benefits-list li,
+  .session-info ul li {
+    font-size: 1rem;
+  }
+
+  .session-info h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-section {
+    padding: 2rem 1rem;
+  }
+
+  .content-container {
+    padding: 0;
+  }
+
+  .session-info {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+}
+
+/* About Page Specific Styles */
+.mission-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: var(--light-color);
+  text-align: left;
+}
+
+.mission-quote p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.content-container h2:not(:first-child) {
+  margin-top: 4rem;
+}
+
+@media (max-width: 768px) {
+  .mission-quote {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .mission-quote {
+    font-size: 1.1rem;
+    padding: 1rem;
+    margin: 1.5rem 0;
   }
 }
 
