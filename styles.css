@@ -66,24 +66,40 @@ h3{
 }
 
 .testimonial{
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 1.5rem;
   font-weight: bold;
-}
-
-.testimonial p{
-  font-size: 1rem;
-  font-weight: normal;
-}
-
-.testimonial:nth-child(2){
-  margin-top: 20px;
-}
-
-.testimonial:nth-child(3){
-  margin-top: 20px;
+  margin-top: 10%;
 }
 
 
+.testimonial-image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+
+.testimonial-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+} 
+
+.testimonial-text{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 80%;
+  text-align: right;
+}
 
 .hamburger-menu {
   cursor: pointer;
