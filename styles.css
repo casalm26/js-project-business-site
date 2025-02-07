@@ -99,7 +99,7 @@ nav {
   margin: 1rem;
   letter-spacing: 1px;
   color: var(--light-color);
-  font-size: clamp(2rem, 5vw, 5rem);
+  font-size: clamp(2rem, 5vw, 10rem);
 }
 
 .hero h3 {
