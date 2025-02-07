@@ -1,5 +1,9 @@
-/* Global styles */
+/*=============================================
+=            Global Variables & Reset            =
+=============================================*/
+
 :root {
+  /* Color Variables */
   --primary-color: #2C392F;
   --secondary-color: #6b9682;
   --accent-color: #A4C3B2;
@@ -8,6 +12,7 @@
   --background-color: #FFFFFF;
 }
 
+/* Base Reset */
 body {
   font-family: 'Times New Roman', Times, serif;
   background-color: var(--secondary-color);
@@ -16,6 +21,13 @@ body {
   color: var(--text-color);
   line-height: 1.6;
 }
+
+/*=====  End of Global Variables & Reset  ======*/
+
+
+/*=============================================
+=            Header & Navigation            =
+=============================================*/
 
 header {
   background: var(--secondary-color);
@@ -30,6 +42,7 @@ nav {
   margin: 0 5%;
 }
 
+/* Logo Styles */
 .logo {
   margin: 0 5%;
 }
@@ -40,6 +53,7 @@ nav {
   letter-spacing: 2px;
 }
 
+/* Navigation Links */
 .nav-links {
   list-style: none;
   display: flex;
@@ -59,7 +73,13 @@ nav {
   color: var(--secondary-color);
 }
 
-/* Hero section */
+/*=====  End of Header & Navigation  ======*/
+
+
+/*=============================================
+=            Hero Section            =
+=============================================*/
+
 .hero {
   background: var(--secondary-color);
   text-align: center;
@@ -90,7 +110,13 @@ nav {
   color: black;
 }
 
-/* Services Grid */
+/*=====  End of Hero Section  ======*/
+
+
+/*=============================================
+=            Services Grid Section            =
+=============================================*/
+
 .services-grid {
   padding: 6rem 2rem;
   background-color: var(--background-color);
@@ -105,6 +131,7 @@ nav {
   letter-spacing: 1px;
 }
 
+/* Grid Layout */
 .grid-container {
   display: grid;
   gap: 4rem;
@@ -112,13 +139,13 @@ nav {
   grid-template-columns: repeat(4, 1fr);
 }
 
+/* Service Cards */
 .service-card {
   background: var(--light-color);
   overflow: hidden;
   display: flex;
   flex-direction: column;
   border: none;
-  box-shadow: none;
   width: 100%;
   padding: 1rem;
   padding-top: 3rem;
@@ -145,7 +172,6 @@ nav {
   font-weight: normal;
   letter-spacing: 1px;
   font-size: clamp(0.9rem, 1.5vw, 1.1rem);
-
 }
 
 .service-card p {
@@ -155,7 +181,13 @@ nav {
   line-height: 1.6;
 }
 
-/* Quotes section */
+/*=====  End of Services Grid Section  ======*/
+
+
+/*=============================================
+=            Quote Sections            =
+=============================================*/
+
 .quotes {
   text-align: center;
   padding: 6rem 2rem;
@@ -179,7 +211,13 @@ nav {
   color: var(--secondary-color);
 }
 
-/* Testimonials section */
+/*=====  End of Quote Sections  ======*/
+
+
+/*=============================================
+=            Testimonials Section            =
+=============================================*/
+
 .testimonials {
   padding: 6rem 2rem;
   background-color: var(--background-color);
@@ -203,6 +241,7 @@ nav {
   gap: 2rem;
 }
 
+/* Testimonial Images */
 .testimonial-image {
   width: 10rem;
   height: 10rem;
@@ -217,6 +256,7 @@ nav {
   object-position: center;
 }
 
+/* Testimonial Text */
 .testimonial-text {
   flex: 1;
   text-align: left;
@@ -232,96 +272,13 @@ nav {
   font-size: 0.9rem;
 }
 
-footer {
-  padding: 2rem;
-  text-align: center;
-  color: var(--text-color);
-  font-size: 0.9rem;
-}
+/*=====  End of Testimonials Section  ======*/
 
-/* Responsive Design */
-@media (max-width: 1024px) {
-  .grid-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-    padding: 2rem;
-  }
-  
-  .nav-links {
-    display: none;
-  }
-  
-  .hamburger-menu {
-    display: block;
-  }
-  
-  .nav-links.active {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
 
-  .nav-links li {
-    margin: 0.5rem 0;
-  }
-  
-  .service-card h3 {
-    font-size: clamp(0.8rem, 2vw, 0.9rem);
-  }
-}
+/*=============================================
+=            Content Sections            =
+=============================================*/
 
-@media (max-width: 480px) {
-  .hero {
-    padding: 4rem 1rem;
-  }
-  
-  .hero h1 {
-    font-size: clamp(1.5rem, 4vw, 2.5rem);
-  }
-  
-  .hero h3 {
-    font-size: 1rem;
-  }
-  
-  .testimonial {
-    flex-direction: column;
-    text-align: center;
-    padding: 0 1rem;
-  }
-  
-  .testimonial-text {
-    text-align: center;
-  }
-  
-  .grid-container {
-    grid-template-columns: 1fr;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .service-card h3 {
-    font-size: 0.9rem;
-  }
-  
-  .services-grid {
-    padding: 1rem;
-  }
-}
-
-/* Desktop-only styles */
-@media (min-width: 1025px) {
-  .hamburger-menu {
-    display: none;
-  }
-  
-  .nav-links {
-    display: flex !important;
-  }
-}
-
-/* Content Section Styles */
 .content-section {
   padding: 4rem 2rem;
   background-color: var(--background-color);
@@ -333,6 +290,7 @@ footer {
   padding: 0 2rem;
 }
 
+/* Content Typography */
 .content-container h2 {
   color: var(--text-color);
   font-weight: normal;
@@ -348,6 +306,7 @@ footer {
   margin-bottom: 2rem;
 }
 
+/* Lists Styling */
 .benefits-list {
   list-style: none;
   padding: 0;
@@ -369,6 +328,7 @@ footer {
   color: var(--secondary-color);
 }
 
+/* Session Info Box */
 .session-info {
   background-color: var(--light-color);
   padding: 3rem;
@@ -408,7 +368,96 @@ footer {
   color: var(--secondary-color);
 }
 
-/* Responsive adjustments for content sections */
+/*=====  End of Content Sections  ======*/
+
+
+/*=============================================
+=            About Page Specific            =
+=============================================*/
+
+.mission-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin: 3rem 0;
+  padding: 2rem;
+  background-color: var(--light-color);
+  text-align: left;
+}
+
+.mission-quote p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+.content-container h2:not(:first-child) {
+  margin-top: 4rem;
+}
+
+/*=====  End of About Page Specific  ======*/
+
+
+/*=============================================
+=            Footer            =
+=============================================*/
+
+footer {
+  padding: 2rem;
+  text-align: center;
+  color: var(--text-color);
+  font-size: 0.9rem;
+}
+
+/*=====  End of Footer  ======*/
+
+
+/*=============================================
+=            Media Queries            =
+=============================================*/
+
+/* Desktop Only (1025px and above) */
+@media (min-width: 1025px) {
+  .hamburger-menu {
+    display: none;
+  }
+  
+  .nav-links {
+    display: flex !important;
+  }
+}
+
+/* Tablet (up to 1024px) */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    padding: 2rem;
+  }
+  
+  .nav-links {
+    display: none;
+  }
+  
+  .hamburger-menu {
+    display: block;
+  }
+  
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+  
+  .service-card h3 {
+    font-size: clamp(0.8rem, 2vw, 0.9rem);
+  }
+}
+
+/* Tablet - Content Sections */
 @media (max-width: 768px) {
   .content-container {
     padding: 0 1rem;
@@ -431,9 +480,53 @@ footer {
   .session-info h3 {
     font-size: 1.2rem;
   }
+
+  .mission-quote {
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
 }
 
+/* Mobile (up to 480px) */
 @media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  
+  .hero h3 {
+    font-size: 1rem;
+  }
+  
+  .testimonial {
+    flex-direction: column;
+    text-align: center;
+    padding: 0 1rem;
+  }
+  
+  .testimonial-text {
+    text-align: center;
+  }
+  
+  .grid-container {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-card h3 {
+    font-size: 0.9rem;
+  }
+  
+  .services-grid {
+    padding: 1rem;
+  }
+
   .content-section {
     padding: 2rem 1rem;
   }
@@ -446,40 +539,13 @@ footer {
     padding: 1.5rem;
     margin: 2rem 0;
   }
-}
 
-/* About Page Specific Styles */
-.mission-quote {
-  font-size: 1.4rem;
-  font-style: italic;
-  margin: 3rem 0;
-  padding: 2rem;
-  background-color: var(--light-color);
-  text-align: left;
-}
-
-.mission-quote p {
-  margin: 0;
-  line-height: 1.6;
-}
-
-.content-container h2:not(:first-child) {
-  margin-top: 4rem;
-}
-
-@media (max-width: 768px) {
-  .mission-quote {
-    font-size: 1.2rem;
-    padding: 1.5rem;
-    margin: 2rem 0;
-  }
-}
-
-@media (max-width: 480px) {
   .mission-quote {
     font-size: 1.1rem;
     padding: 1rem;
     margin: 1.5rem 0;
   }
 }
+
+/*=====  End of Media Queries  ======*/
 
