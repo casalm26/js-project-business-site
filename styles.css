@@ -70,7 +70,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: var(--primary-color);
+  color: var(--light-color);
 }
 
 /*=====  End of Header & Navigation  ======*/
