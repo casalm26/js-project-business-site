@@ -165,6 +165,7 @@ nav {
   object-fit: cover;
   margin-bottom: 0;
   position: relative;
+  border-radius: 1%;
 }
 
 .service-card h3 {
