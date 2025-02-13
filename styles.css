@@ -114,14 +114,23 @@ nav {
   text-align: center;
   padding: 2rem;
   color: var(--text-color);
+  position: relative;
 }
 
 .hero-image {
-  background: url(media/statue2.jpg) center/cover no-repeat;
   width: 100%;
-  height: 100em;
+  height: 100vh;
   position: relative;
-  
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .hero h1 {
@@ -556,6 +565,7 @@ footer {
   .service-card img {
     aspect-ratio: 3/2;
   }
+  
 }
 
 /* Tablet - Content Sections */
@@ -606,5 +616,9 @@ footer {
     width: calc(100% - 2rem);
     margin: 1rem;
     padding: 1.5rem;
+  }
+  
+  .hero {
+    padding: 1rem;
   }
 }
