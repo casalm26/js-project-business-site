@@ -11,6 +11,7 @@
 }
 
 /* Base Styles */
+
 body {
   font-family: 'Times New Roman', Times, serif;
   background-color: var(--secondary-color);
@@ -21,6 +22,7 @@ body {
 }
 
 /* Common Text Styles */
+
 h2 {
   font-weight: normal;
   letter-spacing: 1px;
@@ -28,12 +30,14 @@ h2 {
 }
 
 /* Layout Components */
+
 .content-container, .quote {
   max-width: 800px;
   margin: 0 auto;
 }
 
 /* Section Padding */
+
 .services-grid, .quotes, .testimonials {
   padding: 6rem 2rem;
 }
@@ -42,7 +46,6 @@ h2 {
   padding: 4rem 2rem;
 }
 
-/* Common Background Colors */
 .services-grid, .testimonials, .content-section {
   background-color: var(--background-color);
 }
@@ -67,6 +70,12 @@ nav {
 }
 
 /* Logo Styles */
+
+.logo-link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .logo {
   margin: 0 5%;
 }
@@ -78,6 +87,7 @@ nav {
 }
 
 /* Navigation Links */
+
 .nav-links {
   list-style: none;
   display: flex;
@@ -505,6 +515,7 @@ footer {
 /*== Media Queries ==*/
 
 /* Desktop Only (1025px and above) */
+
 @media (min-width: 1025px) {
   .hamburger-menu {
     display: none;
@@ -516,6 +527,7 @@ footer {
 }
 
 /* Tablet (up to 1024px) */
+
 @media (max-width: 1024px) {
   .services-container {
     grid-template-columns: repeat(2, 1fr);
