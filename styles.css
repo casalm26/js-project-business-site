@@ -501,10 +501,12 @@ nav {
   border-radius: 4px;
   cursor: pointer;
   width: 40%;
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 2vw, 1rem);
   letter-spacing: 1px;
   transition: all 0.3s ease;
   text-transform: lowercase;
+  white-space: nowrap;
+  min-width: fit-content;
 }
 
 .submit-btn:hover {
@@ -620,5 +622,10 @@ footer {
   
   .hero {
     padding: 1rem;
+  }
+  
+  .submit-btn {
+    width: 60%;
+    padding: 0.8rem 1.5rem;
   }
 }
