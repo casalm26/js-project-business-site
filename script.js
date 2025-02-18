@@ -1,11 +1,25 @@
+// Create overlay element
+const overlay = document.createElement('div');
+overlay.className = 'nav-overlay';
+document.body.appendChild(overlay);
+
 const hamburgerButton = document.querySelector('.hamburger-menu');
-const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelector('.nav-links');
 
 hamburgerButton.addEventListener('click', () => {
-    console.log('Button clicked!'); // Debug line to verify click is registered
-    navMenu.classList.toggle('active');
+    navLinks.classList.toggle('active');
+    overlay.classList.toggle('active');
+    hamburgerButton.setAttribute('aria-expanded', 
+        navLinks.classList.contains('active'));
+});
+
+// Close menu when clicking overlay
+overlay.addEventListener('click', () => {
+    navLinks.classList.remove('active');
+    overlay.classList.remove('active');
+    hamburgerButton.setAttribute('aria-expanded', 'false');
 });
 
 // Add this to verify elements are found
 console.log('Hamburger button:', hamburgerButton);
-console.log('Nav menu:', navMenu);
+console.log('Nav links:', navLinks);
