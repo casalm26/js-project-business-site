@@ -1,10 +1,10 @@
 // Create overlay element
-const overlay = document.createElement('div')
-overlay.className = 'nav-overlay'
-document.body.appendChild(overlay)
+const overlay = document.createElement('div');
+overlay.className = 'nav-overlay';
+document.body.appendChild(overlay);
 
-const hamburgerButton = document.querySelector('.hamburger-menu')
-const navLinks = document.querySelector('.nav-links')
+const hamburgerButton = document.querySelector('.hamburger-menu');
+const navLinks = document.querySelector('.nav-links');
 
 hamburgerButton.addEventListener('click', () => {
     navLinks.classList.toggle('active');
