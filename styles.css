@@ -563,6 +563,13 @@ footer {
 
 /*== Media Queries ==*/
 
+@media (max-width: 1203px) {
+  .services-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+}
+
 /* Desktop Only (1025px and above) */
 
 @media (min-width: 1025px) {
@@ -628,15 +635,18 @@ footer {
   }
 }
 
-/* Mobile (up to 480px) */
-
-@media (max-width: 480px) {
+@media (max-width: 620px) {
   .services-container {
     grid-template-columns: 1fr;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* Mobile (up to 480px) */
+
+@media (max-width: 480px) {
   
   .service-card {
     padding: 1rem;
