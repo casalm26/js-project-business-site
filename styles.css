@@ -148,6 +148,11 @@ nav {
 
 /*Services container Section*/
 
+.services-grid {
+  height: 100%;
+  position: relative;
+}
+
 .services-grid h2 {
   text-align: center;
   align-items: center;
@@ -180,6 +185,7 @@ nav {
 .service-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
 .service-card img {
