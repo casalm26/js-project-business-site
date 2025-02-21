@@ -484,7 +484,18 @@ nav {
 }
 
 .form-group input[type="text"],
-.form-group input[type="email"],
+.form-group input[type="email"] {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 4px;
+  font-family: inherit;
+  background-color: var(--background-color);
+  transition: all var(--transition-speed) ease;
+  box-sizing: border-box;
+  resize: none;
+}
+
 .form-group textarea {
   width: 100%;
   padding: 0.8rem;
@@ -492,8 +503,9 @@ nav {
   border-radius: 4px;
   font-family: inherit;
   background-color: var(--background-color);
-  transition: all 0.3s ease;
   box-sizing: border-box;
+  resize: vertical;
+  min-height: 100px;
 }
 
 .form-group input[type="text"]:focus,
