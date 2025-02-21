@@ -1,4 +1,4 @@
-// Create overlay element
+// Mobile Navigation
 const overlay = document.createElement('div');
 overlay.className = 'nav-overlay';
 document.body.appendChild(overlay);
@@ -26,8 +26,15 @@ overlay.addEventListener('click', () => {
 const themeToggle = document.querySelector('.theme-toggle');
 const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
 
-// Set initial theme based on user preference
-if (prefersDarkScheme.matches) {
+// Check localStorage first, then system preference
+const storedTheme = localStorage.getItem('theme');
+if (storedTheme === 'dark') {
+    document.body.setAttribute('data-theme', 'dark');
+    themeToggle.textContent = '🌜';
+} else if (storedTheme === 'light') {
+    document.body.removeAttribute('data-theme');
+    themeToggle.textContent = '🌞';
+} else if (prefersDarkScheme.matches) {
     document.body.setAttribute('data-theme', 'dark');
     themeToggle.textContent = '🌜';
 }
@@ -37,11 +44,37 @@ themeToggle.addEventListener('click', () => {
     if (currentTheme === 'dark') {
         document.body.removeAttribute('data-theme');
         themeToggle.textContent = '🌞';
+        localStorage.setItem('theme', 'light');
     } else {
         document.body.setAttribute('data-theme', 'dark');
         themeToggle.textContent = '🌜';
+        localStorage.setItem('theme', 'dark');
     }
 });
 
-console.log('Hamburger button:', hamburgerButton);
-console.log('Nav links:', navLinks);
+// Form Handling
+const form = document.getElementById('contactForm');
+if (form) { // Only run form code if we're on the contact page
+    const popup = document.querySelector('.popup');
+    const popupOverlay = document.querySelector('.popup-overlay');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        popup.classList.add('show');
+        popupOverlay.classList.add('show');
+        
+        setTimeout(() => {
+            popup.classList.remove('show');
+            popupOverlay.classList.remove('show');
+            form.submit();
+        }, 3000);
+    });
+
+    // Close popup when clicking overlay
+    if (popupOverlay) {
+        popupOverlay.addEventListener('click', () => {
+            popup.classList.remove('show');
+            popupOverlay.classList.remove('show');
+        });
+    }
+}

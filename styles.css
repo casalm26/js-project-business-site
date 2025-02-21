@@ -861,6 +861,7 @@ footer {
     width: 90%;
     max-width: 400px;
     margin: 0 auto;
+    padding: 1rem;
   }
   
   .service-card {
